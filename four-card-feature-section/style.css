@@ -1,0 +1,145 @@
+:root{
+    --Red1: hsl(0, 78%, 62%);
+    --Cyan1: hsl(180, 62%, 55%);
+    --Orange1: hsl(34, 97%, 64%);
+    --Blue1: hsl(212, 86%, 64%);
+    --Grey500: hsl(234, 12%, 34%);
+    --Grey400: hsl(212, 6%, 44%);
+    --White1: hsl(0, 0%, 100%);
+}
+
+
+body{
+    font-size: 15px;
+    background-color: var(--White1);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    color: var(--Grey400);
+    font-weight: 400;
+}
+
+h2, h3{
+    color: var(--Grey500);
+    font-weight: 600
+}
+
+p{
+    color: var(--Grey400);
+    font-weight: 200;
+}
+
+.titre{
+    display: flex;
+    flex-direction: column;
+    place-items: center ;
+}
+
+.titre h1{
+    margin-bottom: 0;
+}
+
+.titre h2{
+    margin-top: 10px;
+}
+
+.titre p{
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto 30px auto;
+}
+
+.card{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-rows: auto 0 auto;
+  grid-template-areas:
+    ".   top    ."
+    "left . right"
+    ".  bottom  .";
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+
+.card-style img {
+    align-self: flex-end;
+    margin-top: auto;
+    max-width: 50px;
+    height: auto;
+}
+
+
+.card > div {
+  justify-self: center;
+  align-self: center;
+}
+
+
+.card-style {
+  background-color: var(--White1); 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.supervisor{
+    grid-area: left;
+    border-top: 4px solid var(--Cyan1);
+}
+
+.team{
+    grid-area: top;
+    border-top: 4px solid var(--Red1);
+}
+
+.karma{
+    grid-area: bottom;
+    border-top: 4px solid var(--Orange1);
+}
+
+.calculator{
+    grid-area: right;
+    border-top: 4px solid var(--Blue1);
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card > div {
+    margin: 15px 0;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .supervisor,
+  .team,
+  .karma,
+  .calculator {
+    grid-area: unset;
+  }
+}
+
+
+
+/* footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
