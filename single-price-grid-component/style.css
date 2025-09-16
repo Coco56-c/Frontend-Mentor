@@ -1,0 +1,174 @@
+:root {
+  --Teal500: hsl(179, 62%, 43%);
+  --Green400: hsl(71, 73%, 54%);
+  --Teal100: hsl(204, 43%, 93%);
+  --Gray500: hsl(218, 22%, 67%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--Teal100);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Karla', sans-serif;
+}
+
+.card {
+  background-color: white;
+  width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card > h1 {
+  padding: 30px 30px 10px;
+  color: var(--Teal500);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card .day {
+  padding: 0 30px 10px;
+  color: var(--Green400);
+  font-weight: bold;
+}
+
+.card .gain {
+  padding: 0 30px 30px;
+  color: var(--Gray500);
+  line-height: 1.5;
+}
+
+.condi {
+  display: flex;
+  width: 100%;
+}
+
+.sub,
+.why {
+  width: 50%;
+  padding: 30px;
+  color: white;
+}
+
+.sub {
+  background-color: var(--Teal500);
+}
+
+.sub h2 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.sub p:first-of-type {
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.sub p span {
+  font-size: 16px;
+  color: var(--Teal100);
+}
+
+.sub button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--Green400);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.why {
+  background-color: hsl(179, 62%, 47%);
+}
+
+.why h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.why p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--Teal100);
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .condi {
+    flex-direction: column;
+  }
+
+  .sub,
+  .why {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sub button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .card .day {
+    font-size: 16px;
+  }
+
+  .gain,
+  .why p,
+  .sub p {
+    font-size: 14px;
+  }
+
+  .sub p:first-of-type {
+    font-size: 20px;
+  }
+
+  .sub p span {
+    font-size: 14px;
+  }
+
+  .sub button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .why h3 {
+    font-size: 16px;
+  }
+}
