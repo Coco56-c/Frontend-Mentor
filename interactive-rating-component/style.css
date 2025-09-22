@@ -1,0 +1,172 @@
+:root {
+  --Orange-500: hsl(25, 97%, 53%);
+
+  --White1: hsl(0, 100%, 100%);
+  --Grey-500: hsl(217, 12%, 63%);
+  --Grey-800: hsl(216, 12%, 32%);
+  --Grey-900: hsl(213, 19%, 18%);
+  --Grey-950: hsl(216, 12%, 8%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    background-color: var(--Grey-950);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--White1);
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.card{
+    background-color: var(--Grey-900);
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.h1{
+    font-weight: 700;
+}
+
+.card p{
+    color: var(--Grey-500);
+    line-height: 1.5;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.icon{
+    background-color: var(--Grey-800);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#rating{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+#rating button{
+    background-color: var(--Grey-800);
+    color: var(--Grey-500);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#rating button:hover{
+    background-color: var(--Orange-500);
+    color: var(--Grey-900);
+    transition: 0.3s;
+}
+
+.submit{
+    background-color: var(--Orange-500);
+    color: var(--Grey-950);
+    border: none;
+    width: 80%;
+    height: 40px;
+    margin-left: 10%;
+    border-radius: 20px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.submit:hover{
+    background-color: var(--White1);
+    color: var(--Grey-950);
+    transition: 0.3s;
+}
+
+#rating button.selected {
+  background-color: var(--White1);
+  color: var(--Grey-950);
+}
+
+
+.note {
+  background-color: var(--Grey-900);
+  width: 400px;
+  height: 400px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  margin: auto;
+}
+
+.selct{
+  background-color: var(--Grey-800);
+  color: var(--Orange-500);
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+.thank{
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.note p:last-child{
+  font-size: 14px;
+  color: var(--Grey-500);
+  line-height: 1.5;
+}
+
+p{
+    font-size: 15px;
+}
+
+/* footer */
+
+.attribution{
+    font-size: 11px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 500px) {
+  .card,
+  .note {
+    width: 90vw;
+    height: auto;
+    min-height: 350px;
+    padding: 20px;
+  }
+  #rating {
+    gap: 15px;
+  }
+}
