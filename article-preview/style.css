@@ -1,0 +1,253 @@
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+     font-family: "Lexend Deca", sans-serif;
+     height: auto;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-color: var(--Light-Grayish-Blue);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 700px;
+    min-width: 280px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.text{
+    width: 100%;
+    line-height: 1.5;
+}
+
+
+.text p {
+    color: var(--Desaturated-Dark-Blue);
+    font-size: 12px;
+    margin-bottom: 20px; 
+    line-height: 1.7;
+    overflow-wrap: break-word;
+}
+
+h1{
+    font-size: 20px;
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px 0 0 10px;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left center; 
+  display: block;
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.author-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.author-text .name {
+  font-weight: 600;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+.author-text .date {
+  color: var(--Grayish-Blue);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.share-icon {
+  background-color: var(--Light-Grayish-Blue);
+  color: var(--Grayish-Blue);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.share-icon:hover {
+  background-color: var(--Desaturated-Dark-Blue);
+}
+
+.share-icon img {
+  width: 15px;
+  height: 15px;
+}
+
+.share-icon:hover,
+.share-icon.active {
+  background-color: var(--Desaturated-Dark-Blue);
+  color: white;
+}
+
+.share-icon.active {
+  background-color: var(--Desaturated-Dark-Blue);
+}
+
+
+.share {
+  display: none;
+  position: absolute;
+  bottom: 45px; /* Ajuste selon la hauteur souhaitée */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  background-color: var(--Very-Dark-Grayish-Blue);
+  padding: 10px 20px;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.share.active {
+  display: flex;
+}
+
+.share::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 12px 12px 0 12px;
+  border-style: solid;
+  border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
+  display: block;
+}
+
+/* footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 50px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto 0 auto;
+    height: auto;
+    position: relative;
+  }
+
+  .share {
+    display: flex !important;
+    position: static;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .share::after {
+    display: none;
+  }
+
+  .share-icon{
+    display: none;
+  }
+
+  .image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .content {
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+
+  .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 98%;
+    max-width: 98vw;
+    height: auto;
+  }
+}
