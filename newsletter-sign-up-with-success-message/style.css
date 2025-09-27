@@ -1,0 +1,291 @@
+/* General */
+
+:root {
+  --Red: hsl(4, 100%, 67%);
+  --Blue-800: hsl(234, 29%, 20%);
+  --Blue-700: hsl(235, 18%, 26%);
+  --Grey: hsl(0, 0%,58%);
+  --White1: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Body */
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Blue-700);
+}
+
+/* main card */
+
+.main-card{
+    background-color: var(--White1);
+    border-radius: 20px;
+    width: 45%;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+/* Info */
+
+.info{
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    gap: 10px;
+    padding: 30px;
+}
+
+.info h1{
+    font-size: 50px;
+    color: var(--Blue-800);
+    margin-bottom: 10px;
+}
+
+.info p{
+    font-size: 16px;
+    color: var(--Blue-800);
+}
+
+.condition{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.condition-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 10px;
+}
+
+
+/* Formulaire */
+
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#form label{
+    font-size: 14px;
+    color: var(--Blue-800);
+    font-weight: 700;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+
+.error-message{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    color: var(--Red);
+    font-weight: 700;
+    display: none;
+}
+
+
+input[type="email"]{
+    padding: 15px;
+    border: 1px solid var(--Grey);
+    border-radius: 10px;
+    font-size: 16px;
+    color: var(--Blue-800);
+    cursor: pointer;
+}
+
+input[type="email"]::placeholder{
+    color: var(--Grey);
+}
+
+input.invalid {
+  border: 1px solid var(--Red);
+  background-color: hsl(0, 100%, 95%);
+}
+
+/* Image main card */
+
+.image-main-card{
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 15px;
+}
+
+.image-main-card img{
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobile{
+    display: none;
+}
+
+/* Button */
+
+#form button{
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--Blue-800);
+    color: var(--White1);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#form button:hover{
+    background-color: var(--Red);
+}
+
+
+/* Sub card*/
+
+.sub-card{
+    width: 25%;
+    background-color: var(--White1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 50px;
+    color: var(--White1);
+    border-radius: 20px;
+}
+
+
+/* Image sub card */
+
+
+.sub-card img{
+    width: 70px;
+    height: 70px;
+}
+
+/* Text sub card */
+
+.sub-card h2{
+    font-size: 50px;
+    color: var(--Blue-800);
+    line-height: 1;
+    margin-top: 20px;
+}
+
+.sub-card p{
+    font-size: 14px;
+    color: var(--Blue-700);
+    line-height: 1.5;  
+}
+
+.sub-card p span{
+    color: var(--Blue-800);
+    font-weight: 700;
+}
+
+/* Button sub card */
+
+.sub-card button{
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--Blue-800);
+    color: var(--White1);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sub-card button:hover{
+    background-color: var(--Red);
+}
+
+/* Footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 30px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/*--------------- Média -------------------*/
+
+@media (max-width: 768px) {
+
+    body{
+        width: 100%;
+    }
+
+    .main-card{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        object-fit: cover;
+    }
+
+    .info{
+        width: 100%;
+        flex: none;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .sub-card{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 40px 20px;
+    }
+}
