@@ -1,0 +1,208 @@
+/* Général */
+
+:root{
+    --Purple500: hsl(259, 100%, 65%);
+    --Red400: hsl(0, 100%, 67%);
+    --White1: hsl(0, 100%, 100%);
+    --Grey100: hsl(0, 0%, 94%);
+    --Grey200: hsl(0, 0%, 86%);
+    --Grey500: hsl(0, 1%, 44%);
+    --Black: hsl(0, 0%, 0%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+
+body{
+    background-color: var(--Grey100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card */
+
+.card{
+    background-color: var(--White1);
+    width: 40%;
+    border-radius: 20px 20px 200px 20px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* Birthday */ 
+
+.birthday{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    gap: 40px;
+}
+
+/* Input */
+
+.inputtype{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 0;
+}
+
+.inputtype label{
+    font-weight: 400;
+}
+
+.inputtype input{
+    font-weight: 700;
+}
+
+.inputtype span{
+    color: var(--Red400);
+    font-size: 13px;
+    font-weight: 400;
+    display: none;
+}
+
+input{
+    font-size: 32px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid var(--Grey200);
+    padding-left: 20px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid var(--Purple500);
+}
+
+input:hover{
+    border-color: var(--Purple500);
+}
+
+input ::placeholder{
+    margin-left: 10px;
+}
+
+/* Séparation */
+
+.separation {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.separation hr {
+  flex-grow: 1;
+  border: none;
+  border-bottom: 1px solid var(--Grey200);
+}
+
+.separation button {
+  background-color: var(--Purple500);
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.separation button:hover{
+    background-color: var(--Black);
+}
+
+/* Résultat */
+
+.resultat{
+    font-size: 80px;
+    font-weight: 800;
+}
+
+.resultat span{
+    color: var(--Purple500);
+}
+
+
+
+
+/* Footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ----------------- Média -------------------*/
+
+@media (max-width: 768px){
+    body{
+        width: 100%;
+        padding: 20px;
+    }
+    .card{
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .birthday{
+        gap: 25px;
+        width: 100%;
+    }
+
+    input{
+        padding-left: 5px;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .separation button {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .resultat{
+        font-size: 60px;
+        word-break: break-word;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 500px) {
+  .birthday {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .resultat{
+    font-size: 35px;
+  }
+}
