@@ -1,0 +1,483 @@
+:root{
+    /********** Theme 1 ***********/
+
+        /* Background */
+    --navy-850: hsl(222, 26%, 31%);
+    --navy-900: hsl(223, 31%, 20%);
+    --navy-950: hsl(224, 36%, 15%);
+        /* Key */
+    --navy-700: hsl(225, 21%, 49%);
+    --navy-800: hsl(224, 28%, 35%);
+    --red-600: hsl(6, 63%, 50%);
+    --red-800: hsl(6, 70%, 34%);
+    --gray-200: hsl(0, 0%, 90%);
+    --gray-orange-400: hsl(28, 16%, 65%);
+
+        /* Text*/
+    --navy-750: hsl(221, 14%, 31%);
+    --white: hsl(0, 100%, 100%);
+
+    /******* Theme 2 ****************/
+
+        /* Background */
+    --Gray-200-main-background: hsl(0, 0%, 90%);
+    --Gray-300-toggle-background-keypad-background: hsl(0, 5%, 81%);
+    --Gray-100-screen-background: hsl(0, 0%, 93%);
+
+        /* Key */
+    --Blue-500-key-background: hsl(185, 42%, 37%);
+    --Blue-600-key-shadow: hsl(185, 58%, 25%);
+    --Orange-700-key-background-toggle: hsl(25, 98%, 40%);
+    --Orange-800-key-shadow: hsl(25, 99%, 27%);
+    --Grey-200-key-background: hsl(0, 0%, 90%);
+    --Grey-orange-450-key-shadow: hsl(35, 11%, 61%);
+    
+        /* Text */
+    --color-Gray-900: hsl(60, 10%, 19%);
+    --color-White-text: hsl(0, 100%, 100%);
+
+
+    /******* Theme 3 ****************/
+
+        /* Background */
+
+    --Purple-950-main-background: hsl(268, 75%, 9%);
+    --Purple-900-toggle-background-keypad-background-screen-background: hsl(268, 71%, 12%);
+
+        /* Key */
+
+    --Purple-800-key-background: hsl(281, 89%, 26%);
+    --Purple-400-key-shadow: hsl(285, 91%, 52%);
+    --Cyan-500-key-background-toggle: hsl(176, 100%, 44%);
+    --Cyan-400-key-shadow: hsl(177, 92%, 70%);
+    --Purple-850-key-background: hsl(268, 47%, 21%);
+    --Purple-750-key-shadow: hsl(290, 70%, 36%);
+
+
+        /* Text */
+
+    --Yellow-300: hsl(52, 100%, 62%);
+    --Blue-950: hsl(198, 20%, 13%);
+    --White-text: hsl(0, 100%, 100%);
+
+}
+
+/* General */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-family: "League Spartan", sans-serif;
+}
+
+body{
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.calc{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+
+
+
+
+/****************************Haut calculatrice******************************/
+
+.tete{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 32px
+}
+
+.tetetheme{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px
+}
+
+.theme-switch {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.label {
+  font-size: 12px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theme{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.numbers {
+  width: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.numbers span {
+  font-size: 10px;
+}
+
+.toggle {
+  position: relative;
+  width: 50px;
+  height: 18px;
+  background: var(--navy-900);
+  border-radius: 20px;
+}
+
+.toggle input {
+  position: absolute;
+  width: 33%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#theme1 { left: 0; }
+#theme2 { left: 33%; }
+#theme3 { left: 66%; }
+
+.slider {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  top: 4px;
+  left: 5px;
+  transition: 0.3s;
+}
+
+#theme1:checked ~ .slider {
+  left: 4px;
+}
+
+#theme2:checked ~ .slider {
+  left: 20px;
+}
+
+#theme3:checked ~ .slider {
+  left: 36px;
+}
+
+/*********************************Ecran****************************************/
+
+.ecran{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 80px;
+    background-color: var(--navy-950);
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 36px
+}
+
+/******************************clavier*****************************************/
+
+.clavier{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    padding: 1.2rem;
+    background-color: var(--navy-900);
+    border-radius: 10px;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    font-size: 32px;
+    background-color: var(--gray-200);
+    border-radius: 10px;
+    border: none;
+    color: var(--navy-750);
+    cursor: pointer;
+    box-shadow: 0 4px 0 var(--gray-orange-400);
+}
+.btn:hover{
+    background-color: var(--white);
+    color: var(--navy-750);
+    box-shadow: 0 4px 0 var(--gray-orange-400);
+}
+
+.reset {
+  grid-column: span 2;
+  background-color: var(--navy-800);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--navy-750);
+}
+
+.reset:hover {
+  background-color: var(--navy-700);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--navy-750);
+}
+
+.equal {
+  grid-column: span 2;
+  background-color: var(--red-800);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--red-800);
+}
+
+.equal:hover {
+  background-color: var(--red-600);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--red-600);
+}
+
+.del{
+  background-color: var(--navy-800);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--navy-750);
+}
+
+.del:hover {
+  background-color: var(--navy-700);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--navy-750);
+}
+
+/*******************Theme 1***************************/
+
+body.theme1 {
+  background-color: var(--navy-850);
+  color: var(--white);
+}
+
+
+/*******************Theme 2***************************/
+
+body.theme2 {
+  background-color: var(--Gray-200-main-background);
+  color: var(--color-Gray-900);
+}
+
+body.theme2 .ecran {
+  background-color: var(--Gray-100-screen-background);
+}
+
+body.theme2 .toggle{
+  background-color: var(--Gray-300-toggle-background-keypad-background);
+}
+
+body.theme2 .slider{
+  background-color: var(--Orange-700-key-background-toggle);
+}
+
+body.theme2 .clavier{
+  background-color: var(--Gray-300-toggle-background-keypad-background);
+}
+
+body.theme2 .egal{
+  background-color: var(--Blue-600-key-shadow);
+  box-shadow: 0 4px 0 var(--navy-750);
+}
+
+body.theme2 .egal:hover{
+  background-color: var(--Blue-500-key-background);
+  box-shadow: 0 4px 0 var(--Grey-orange-450-key-shadow);
+}
+
+body.theme2 .equal {
+  background-color: var(--Orange-800-key-shadow);
+  box-shadow: 0 4px 0 var(--navy-750);
+}
+
+body.theme2 .equal:hover {
+  background-color: var(--Orange-700-key-background-toggle);   
+  box-shadow: 0 4px 0 var(--navy-750);
+}
+
+body.theme2 .del{
+  background-color: var(--Blue-600-key-shadow);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--Grey-orange-450-key-shadow);
+}
+
+body.theme2 .del:hover {
+  background-color: var(--Blue-500-key-background);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--navy-750);
+}
+
+body.theme2 .reset {
+  background-color: var(--Blue-600-key-shadow);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--navy-750);
+}
+
+body.theme2 .reset:hover {
+  background-color: var(--Blue-500-key-background);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--navy-750);
+}
+
+
+/*******************Theme 3***************************/
+
+body.theme3 {
+  background-color: var(--Purple-950-main-background);
+  color: var(--Yellow-300);
+}
+
+body.theme3 .ecran {
+  background-color: var(--Purple-900-toggle-background-keypad-background-screen-background);
+}
+
+body.theme3 .toggle{
+  background-color: var(--Purple-900-toggle-background-keypad-background-screen-background);
+}
+
+body.theme3 .slider{
+  background-color: var(--Cyan-500-key-background-toggle);
+}
+
+body.theme3 .clavier{
+  background-color: var(--Purple-900-toggle-background-keypad-background-screen-background);
+}
+
+body.theme3 .btn{
+  background-color:var(--Purple-850-key-background);
+  color: var(--Yellow-300);
+  box-shadow: 0 4px 0 var(--Purple-750-key-shadow);
+}
+
+body.theme3 .btn:hover{
+  background-color:var(--Purple-400-key-shadow);
+  color: var(--Yellow-300);
+}
+
+body.theme3 .equal:hover{
+  background-color: var(--Cyan-400-key-shadow);
+  box-shadow: 0 4px 0 var(--Cyan-400-key-shadow);
+  color: var(--Blue-950);
+}
+
+body.theme3 .equal{
+  background-color: var(--Cyan-500-key-background-toggle);
+  box-shadow: 0 4px 0 var(--Cyan-500-key-background-toggle);
+  color: var(--Blue-950);
+}
+
+
+body.theme3 .del{
+  background-color: var(--Purple-800-key-background);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--Purple-400-key-shadow);
+}
+
+body.theme3 .del:hover {
+  background-color: var(--Purple-400-key-shadow);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--Purple-400-key-shadow);
+}
+
+body.theme3 .reset {
+  background-color: var(--Purple-800-key-background);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--Purple-750-key-shadow);
+}
+
+body.theme3 .reset:hover {
+  background-color: var(--Purple-400-key-shadow);
+  color: var(--white);
+  box-shadow: 0 4px 0 var(--Purple-750-key-shadow);
+}
+
+
+/* Footer */
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .attribution a {
+        color: var(--blue-400);
+    }
+
+
+@media (max-width: 500px) {
+
+  .calc {
+    width: 90%;
+  }
+
+  .tete {
+    font-size: 24px;
+  }
+
+  .ecran {
+    height: 70px;
+    font-size: 28px;
+  }
+
+  .clavier {
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .btn {
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .reset,
+  .equal {
+    font-size: 20px;
+  }
+
+}
+
+
+@media (max-width: 375px) {
+    .calc {
+        width: 90%;
+    }
+
+    .btn {
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .ecran {
+        font-size: 28px;
+        height: 70px;
+    }
+
+    .clavier {
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+}
