@@ -1,0 +1,130 @@
+
+:root {
+  --White: hsl(0, 100%, 100%);
+  --Purple-100: hsl(275, 100%, 97%);
+  --Purple-600: hsl(292, 16%, 49%);
+  --Purple-650: hsl(293, 40%, 60%);
+  --Purple-950: hsl(292, 42%, 14%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lexend Deca", sans-serif;
+    background-image: url(./images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center -100px;
+    background-color: var(--Purple-100);
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--White);
+    border-radius: 10px;
+    width: 30%;
+    padding: 30px
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title h1{
+    color: var(--Purple-950);
+    font-size: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.accordion-item{
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    cursor: pointer;
+}
+
+.accordion-item:last-child{
+    border-bottom: none;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  color: var(--Purple-600);
+}
+
+.accordion-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordion-header h2{
+    color: var(--Purple-950);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.accordion-header:hover h2 {
+  color: var(--Purple-650);
+  cursor: pointer;
+}
+
+p{
+    font-size: 16px;
+}
+
+/* footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 30px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+    body{
+        background-image: url(./images/background-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+  .container {
+    width: 90%;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .title h1 {
+    font-size: 28px;
+  }
+
+  .accordion-header h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+
+/*  font-weight: <weight>; 400 ou 600 ou 700*/
