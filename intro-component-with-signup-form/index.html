@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="info">
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+    </div>
+    <div class="signup-form">
+      <div class="try">
+        <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+      </div>
+      <form id="form">
+        <input type="text" id="first-name" name="first-name" placeholder="First Name" >
+        <span class="error-message" id="first-name-error">First Name cannot be empty</span>
+        <input type="text" id="last-name" name="last-name" placeholder="Last Name" >
+        <span class="error-message" id="last-name-error">Last Name cannot be empty</span>
+        <input type="email" id="email" name="email" placeholder="Email Address" >
+        <span class="error-message" id="email-error">Looks like this is not an email</span>
+        <input type="password" id="password" name="password" placeholder="Password" >
+        <span class="error-message" id="password-error">Password cannot be empty</span>
+        <button class="submit" type="submit">Claim your free trial</button>
+        <p class="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+      </form>
+    </div>
+  </div>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Coco56-c">Crocq Corentin</a>.
+    </p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
