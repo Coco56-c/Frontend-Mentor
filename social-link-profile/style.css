@@ -1,0 +1,86 @@
+:root {
+    --green1: hsl(75, 94%, 57%);
+    --White1: hsl(0, 0%, 100%);
+    --Grey700: hsl(0, 0%, 20%);
+    --Grey800: hsl(0, 0%, 12%);
+    --Grey900: hsl(0, 0%, 8%);
+}
+
+/* Body*/
+
+body {
+    background-color: var(--Grey900);
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.card {
+    max-width: 400px;
+    height: auto;
+    width: 100%;
+    background-color: var(--Grey800);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+
+h1{
+    color: var(--White1);
+    margin-bottom: 0.3rem;
+}
+
+h3 {
+    color: var(--green1);
+    margin-top: 0.5rem;
+}
+
+button {
+  transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: var(--green1);
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--Grey700);
+    color: var(--White1);
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    border: none;
+}
+
+p {
+    font-size: 14px;
+    color: var(--White1);
+}
+
+img {
+    border-radius: 50%;
+    max-width: 80px;
+    width: 100%;
+}
+
+/* footer*/
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    color: var(--White1);
+    position: relative;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
