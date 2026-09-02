@@ -1,0 +1,165 @@
+:root{
+    --Gold500: hsl(31, 77%, 52%);
+    --Cyan800: hsl(184, 100%, 22%);
+    --Green950: hsl(179, 100%, 13%);
+    /* Neutral */
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75);/*paragraphs*/
+    --Gray100: hsl(0, 0%, 95%);/*background, headings, buttons*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    background-color: var(--Gray100);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 900px;
+    width: 90%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.box{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex: 1;
+}
+
+.card img{
+    width: 70px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.box1{
+    background-color: var(--Gold500);
+    border-radius: 15px 0 0 15px;
+}
+
+.box2{
+    background-color: var(--Cyan800);
+}
+
+.box3{
+    background-color: var(--Green950);
+    border-radius: 0 15px 15px 0;
+}
+
+h2{
+    color: var(--Gray100);
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform  : uppercase;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+p{
+    color: var(--Transparentwhite);
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+button{
+    appearance: none;
+    background-color: var(--Gray100);
+    cursor: pointer;
+    margin-top: 50px;
+    border-radius: 30px;
+    height: 45px;
+    width: 70%;
+    border: none;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+.box1 button{
+    color: var(--Gold500);
+}
+
+.box1 button:hover{
+    background-color: var(--Gold500);
+    color: var(--Transparentwhite);
+    border: 2px solid var(--Transparentwhite);
+}
+
+.box2 button{
+    color: var(--Cyan800);
+}
+
+.box2 button:hover{
+    background-color: var(--Cyan800);
+    color: var(--Transparentwhite);
+    border: 2px solid var(--Transparentwhite);
+}
+
+.box3 button{
+    color: var(--Green950);
+}
+
+.box3 button:hover{
+    background-color: var(--Green950);
+    color: var(--Transparentwhite);
+    border: 2px solid var(--Transparentwhite);
+}
+
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .box {
+    padding: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .box1 {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .box3 {
+    border-radius: 0 0 15px 15px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+
+
+/* footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 30px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
