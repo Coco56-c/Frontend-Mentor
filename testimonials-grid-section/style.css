@@ -1,0 +1,161 @@
+:root{
+/* Primary */
+    --Purple50: hsl(260, 100%, 95%);
+    --Purple300: hsl(264, 82%, 80%);
+    --Purple500: hsl(263, 55%, 52%);
+/* Neutral */
+    --White1: hsl(0, 0%, 100%);
+    --Grey100: hsl(214, 17%, 92%);
+    --Grey200: hsl(0, 0%, 81%);
+    --Grey400: hsl(224, 10%, 45%);
+    --Grey500: hsl(217, 19%, 35%);
+    --Darkblue1: hsl(219, 29%, 14%);
+    --Black1: hsl(0, 0%, 7%);
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Grey200);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+
+
+.place{
+    background-color: var(--Grey200);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+    
+}
+
+
+
+.card{
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 5px 5px 10px var(--Grey400);
+}
+
+.profil-picture{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.user-info h2 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.user-info .status {
+  color: var(--Grey300);
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.daniel{
+    background-color: var(--Purple500);
+    grid-column: span 2 / span 2;
+    color: var(--White1);
+    position: relative;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top 0 right 50px;
+    background-size: 100px;
+}
+
+
+.jonathan{
+    background-color: var(--Grey500);
+    grid-column-start: 3;
+    color: var(--White1);
+}
+
+.kira{
+    grid-row: span 2 / span 2;
+    grid-column-start: 4;
+    background-color: var(--Grey100);
+}
+
+.jeanette{
+    grid-row-start: 2;
+    background-color: var(--Grey100);
+    
+}
+
+.patrick{
+    background-color: var(--Darkblue1);
+    color: var(--White1);
+    grid-row-start: 2;
+    grid-column: span 2;
+}
+
+.commentaire{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+blockquote{
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--Grey200);
+}
+
+.kira blockquote{
+    color: var(--Grey400);
+}
+
+.jeanette blockquote{
+    color: var(--Grey400);
+}
+
+
+@media (max-width: 768px) {
+  .place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .place > div {
+    margin: 15px 0;
+    width: 80%;
+  }
+}
+
+
+
+
+/* footer */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin: 20px 0;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
