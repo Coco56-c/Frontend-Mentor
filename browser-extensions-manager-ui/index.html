@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend+Deca:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="./images/logo.svg" id="logo" alt="logo">
+    </div>
+    <div class="theme-toggle">
+      <button id="themeToggleBtn" aria-label="Toggle dark mode">
+        <img src="./images/icon-moon.svg" alt="Mode nuit" id="themeIcon" />
+      </button>
+    </div>
+  </div>
+
+  <div class="top-bar">
+    <div class="title">
+      <h1>Extensions List</h1>
+    </div>
+    <div class="buttons">
+      <button class="all filter-btn" data-filter="all">All</button>
+      <button class="active filter-btn" data-filter="active">Active</button>
+      <button class="inactive filter-btn" data-filter="inactive">Inactive</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="div1 box">
+      <div class="box-info">
+        <img src="./images/logo-devlens.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>DevLens</h2>
+          <p>Quickly inspect page layouts and visualize element boundaries.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="div2 box">
+      <div class="box-info">
+        <img src="./images/logo-style-spy.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>StyleSpy</h2>
+          <p>Instantly analyze and copy CSS from any webpage element.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="div3 box">
+      <div class="box-info">
+        <img src="./images/logo-speed-boost.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>SpeedBoost</h2>
+          <p>Optimizes browser resource usage to accelerate page loading.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="div4 box">
+      <div class="box-info">
+        <img src="./images/logo-json-wizard.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>JSONWizard</h2>
+          <p>Formats, validates, and prettifies JSON responses in-browser.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="div5 box">
+      <div class="box-info">
+        <img src="./images/logo-tab-master-pro.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>TabMaster Pro</h2>
+          <p>Organizes browser tabs into groups and sessions.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="div6 box">
+      <div class="box-info">
+        <img src="./images/logo-viewport-buddy.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>ViewportBuddy</h2>
+          <p>Simulates various screen resolutions directly within the browser.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="div7 box">
+      <div class="box-info">
+        <img src="./images/logo-markup-notes.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>Markup Notes</h2>
+          <p>Enables annotation and notes directly onto webpages for collaborative debugging.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="div8 box">
+      <div class="box-info">
+        <img src="./images/logo-grid-guides.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>GridGuides</h2>
+          <p>Overlay customizable grids and alignment guides on any webpage.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="div9 box">
+      <div class="box-info">
+        <img src="./images/logo-palette-picker.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>Palette Picker</h2>
+          <p>Instantly extracts color palettes from any webpage.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="div10 box">
+      <div class="box-info">
+        <img src="./images/logo-link-checker.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>LinkChecker</h2>
+          <p>Scans and highlights broken links on any page.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="div11 box">
+      <div class="box-info">
+        <img src="./images/logo-dom-snapshot.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>DOM Snapshot</h2>
+          <p>Capture and export DOM structures quickly.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <div class="div12 box">
+      <div class="box-info">
+        <img src="./images/logo-console-plus.svg" alt="logo-devlens">
+        <div class="text">
+          <h2>ConsolePlus</h2>
+          <p>Enhanced developer console with advanced filtering and logging.</p>
+        </div>
+      </div>
+      <div class="box-actions">
+        <button>Remove</button>
+        <label class="switch">
+          <input type="checkbox" class="toggle-switch checkbox1"/>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Coco56-c">Crocq Corentin</a>.
+  </div>
+</body>
+</html>
