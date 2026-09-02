@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Weather app</title>
+</head>
+
+<body>
+
+  <header class="hautdepage">
+
+    <img
+      src="./images/logo.svg"
+      class="logo"
+      alt="logo"
+    >
+
+    <div class="container">
+
+      <button class="dropdown-btn">
+
+        <img
+          src="./images/icon-units.svg"
+          alt="icon-roue-dente"
+        >
+
+        Units
+
+        <img
+          src="./images/icon-dropdown.svg"
+          alt="icon-dropdown"
+        >
+
+      </button>
+
+
+      <!-- MENU UNITS -->
+
+      <div class="dropdown-content units-menu">
+
+        <div
+          class="option"
+          id="switch-units-btn"
+          data-type="switch-units"
+        >
+          Switch to Imperial/Metric
+        </div>
+
+
+        <!-- TEMPERATURE -->
+
+        <div class="dropdown-section">
+
+          <h3>Temperature</h3>
+
+          <div
+            class="option"
+            data-type="temperature"
+            data-value="celsius"
+          >
+            Celsius (°C)
+
+            <span class="checkmark">✔</span>
+          </div>
+
+          <div
+            class="option"
+            data-type="temperature"
+            data-value="fahrenheit"
+          >
+            Fahrenheit (°F)
+
+            <span class="checkmark">✔</span>
+          </div>
+
+        </div>
+
+
+        <!-- WIND SPEED -->
+
+        <div class="dropdown-section">
+
+          <h3>Wind Speed</h3>
+
+          <div
+            class="option"
+            data-type="wind-speed"
+            data-value="kmh"
+          >
+            km/h
+
+            <span class="checkmark">✔</span>
+          </div>
+
+          <div
+            class="option"
+            data-type="wind-speed"
+            data-value="mph"
+          >
+            mph
+
+            <span class="checkmark">✔</span>
+          </div>
+
+        </div>
+
+
+        <!-- PRECIPITATION -->
+
+        <div class="dropdown-section">
+
+          <h3>Precipitation</h3>
+
+          <div
+            class="option"
+            data-type="precipitation"
+            data-value="mm"
+          >
+            Millimeters (mm)
+
+            <span class="checkmark">✔</span>
+          </div>
+
+          <div
+            class="option"
+            data-type="precipitation"
+            data-value="inch"
+          >
+            inches (in)
+
+            <span class="checkmark">✔</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <div id="weather-app">
+
+    <section class="search-section">
+
+      <h1>
+        How's the sky looking today?
+      </h1>
+
+    </section>
+
+
+    <div class="barresearch">
+
+      <div class="search-input-container">
+
+        <input
+          type="search"
+          id="city-search"
+          placeholder="Search for a place..."
+          autocomplete="off"
+        >
+
+        <ul
+          id="suggestions-list"
+          class="suggestions-list"
+        ></ul>
+
+      </div>
+
+
+      <button id="search">
+        Search
+      </button>
+
+    </div>
+
+
+    <!-- WEATHER LAYOUT -->
+
+    <main class="weather-layout">
+
+
+      <!-- LEFT COLUMN -->
+
+      <div class="weather-left">
+
+
+        <!-- CURRENT WEATHER -->
+
+        <section class="current-weather">
+
+          <div class="current-weather-info">
+
+            <h2 id="city-name">
+              Berlin, Germany
+            </h2>
+
+            <p id="current-date">
+              Friday, August 28, 2026
+            </p>
+
+          </div>
+
+
+          <div class="current-temperature">
+
+            <img
+              id="weather-icon"
+              src="./images/icon-sunny.webp"
+              alt="Sunny"
+            >
+
+            <span id="temperature">
+              24°
+            </span>
+
+          </div>
+
+
+          <!-- LOADING -->
+
+          <div class="current-loading">
+            <div class="loading-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <p>Loading...</p>
+          </div>
+
+
+        </section>
+
+
+        <!-- WEATHER DETAILS -->
+
+        <section class="weather-details">
+
+          <div class="weather-detail">
+
+            <h3>
+              Feels like
+            </h3>
+
+            <p id="feels-like">
+              -
+            </p>
+
+          </div>
+
+
+          <div class="weather-detail">
+
+            <h3>
+              Humidity
+            </h3>
+
+            <p id="humidity">
+              -
+            </p>
+
+          </div>
+
+
+          <div class="weather-detail">
+
+            <h3>
+              Wind
+            </h3>
+
+            <p id="wind">
+              -
+            </p>
+
+          </div>
+
+
+          <div class="weather-detail">
+
+            <h3>
+              Precipitation
+            </h3>
+
+            <p id="precipitation">
+              -
+            </p>
+
+          </div>
+
+        </section>
+
+
+        <!-- DAILY FORECAST -->
+
+        <section class="daily-forecast">
+
+          <h2>
+            Daily forecast
+          </h2>
+
+          <div
+            id="forecast-container"
+            class="forecast-container"
+          >
+          </div>
+
+        </section>
+
+
+      </div>
+
+
+      <!-- RIGHT COLUMN -->
+
+      <aside class="hourly-forecast">
+
+
+        <div class="hourly-header">
+
+          <h2>
+            Hourly forecast
+          </h2>
+
+
+          <!-- DAY SELECTION -->
+
+          <div class="container">
+
+            <button class="dropdown-day">
+
+              <span id="selected-day">
+                Tuesday
+              </span>
+
+              <img
+                src="./images/icon-dropdown.svg"
+                alt="icon-dropdown"
+              >
+
+            </button>
+
+
+            <div class="dropdown-content day-menu">
+
+
+              <div
+                class="option switch-day"
+                data-day="0"
+              >
+                Monday
+              </div>
+
+
+              <div
+                class="option switch-day"
+                data-day="1"
+              >
+                Tuesday
+              </div>
+
+
+              <div
+                class="option switch-day"
+                data-day="2"
+              >
+                Wednesday
+              </div>
+
+
+              <div
+                class="option switch-day"
+                data-day="3"
+              >
+                Thursday
+              </div>
+
+
+              <div
+                class="option switch-day"
+                data-day="4"
+              >
+                Friday
+              </div>
+
+
+              <div
+                class="option switch-day"
+                data-day="5"
+              >
+                Saturday
+              </div>
+
+
+              <div
+                class="option switch-day"
+                data-day="6"
+              >
+                Sunday
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- HOURLY FORECAST -->
+
+        <div
+          id="hourly-container"
+          class="hourly-container"
+        >
+        </div>
+
+      </aside>
+
+    </main>
+
+  </div>
+
+
+  <!-- ERROR MESSAGE -->
+
+  <div class="msgerreur">
+
+    <div class="connectionlost">
+
+      <img
+        src="./images/icon-error.svg"
+        alt="icon-error"
+      >
+
+      <h1>
+        Something went wrong
+      </h1>
+
+      <p>
+        We couldn't connect to the server (API error).
+        Please try again in a few moments
+      </p>
+
+      <button class="retry">
+
+        <img
+          src="./images/icon-retry.svg"
+          alt="icon-retry"
+        >
+
+        Retry
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <div class="attribution">
+
+    Challenge by
+
+    <a
+      href="https://www.frontendmentor.io?ref=challenge"
+    >
+      Frontend Mentor
+    </a>.
+
+    Coded by
+
+    <a href="https://github.com/Coco56-c">
+      Crocq Corentin
+    </a>.
+
+  </div>
+
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
