@@ -1,12 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Frontend Mentor - Coco56</title>
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -44,28 +51,54 @@
 
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
             gap: 25px;
         }
 
         .project {
             background: white;
+
             border-radius: 12px;
+
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.08);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
         .project:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         .project-preview {
             width: 100%;
             height: 180px;
+
             object-fit: cover;
+
             background: #ddd;
+
+            display: block;
+        }
+
+        .no-preview {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            color: #777;
+
+            font-size: 1rem;
         }
 
         .project-content {
@@ -74,17 +107,27 @@
 
         .project h2 {
             font-size: 1.2rem;
+
             margin-bottom: 15px;
+
+            text-transform: capitalize;
         }
 
         .project a {
             display: inline-block;
+
             padding: 10px 16px;
+
             background: #6c63ff;
+
             color: white;
+
             text-decoration: none;
+
             border-radius: 6px;
-            transition: background 0.2s ease;
+
+            transition:
+                background 0.2s ease;
         }
 
         .project a:hover {
@@ -93,64 +136,632 @@
 
         footer {
             text-align: center;
+
             padding: 40px 20px;
+
             color: #777;
         }
+
     </style>
+
 </head>
 
 <body>
 
-<header>
-    <h1>Frontend Mentor</h1>
-    <p>Mes projets Frontend Mentor</p>
-</header>
+    <header>
 
-<main class="container">
+        <h1>Frontend Mentor</h1>
 
-    <section class="projects">
+        <p>
+            Mes projets Frontend Mentor
+        </p>
 
-        <!-- Les projets seront ajoutés automatiquement ici -->
+    </header>
+
+    <main class="container">
+
+        <section class="projects">
+
 
         <article class="project">
+
             <img
-                class="project-preview"
-                src="./clipboard-landing-page/preview.jpg"
-                alt="Clipboard Landing Page"
-            >
+    class="project-preview"
+    src="./3-column-preview-card/preview.jpg"
+    alt="3 Column Preview Card"
+>
 
             <div class="project-content">
+
+                <h2>3 Column Preview Card</h2>
+
+                <a href="./3-column-preview-card/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./age-calculator/preview.jpg"
+    alt="Age Calculator"
+>
+
+            <div class="project-content">
+
+                <h2>Age Calculator</h2>
+
+                <a href="./age-calculator/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Article Preview</h2>
+
+                <a href="./article-preview/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Article Preview Component</h2>
+
+                <a href="./article-preview-component/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./base-apparel/preview.jpg"
+    alt="Base Apparel"
+>
+
+            <div class="project-content">
+
+                <h2>Base Apparel</h2>
+
+                <a href="./base-apparel/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Blog Preview Card</h2>
+
+                <a href="./blog-preview-card/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./browser-extensions-manager-ui/preview.jpg"
+    alt="Browser Extensions Manager Ui"
+>
+
+            <div class="project-content">
+
+                <h2>Browser Extensions Manager Ui</h2>
+
+                <a href="./browser-extensions-manager-ui/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./calculator-app/preview.jpg"
+    alt="Calculator App"
+>
+
+            <div class="project-content">
+
+                <h2>Calculator App</h2>
+
+                <a href="./calculator-app/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./clipboard-landing-page/preview.jpg"
+    alt="Clipboard Landing Page"
+>
+
+            <div class="project-content">
+
                 <h2>Clipboard Landing Page</h2>
 
                 <a href="./clipboard-landing-page/">
                     Voir le projet
                 </a>
+
             </div>
+
         </article>
 
         <article class="project">
+
             <img
-                class="project-preview"
-                src="./weather-app/preview.jpg"
-                alt="Weather App"
-            >
+    class="project-preview"
+    src="./faq-accordion/preview.jpg"
+    alt="Faq Accordion"
+>
 
             <div class="project-content">
+
+                <h2>Faq Accordion</h2>
+
+                <a href="./faq-accordion/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Four Card Feature Section</h2>
+
+                <a href="./four-card-feature-section/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./fylo-data-storage-component/preview.jpg"
+    alt="Fylo Data Storage Component"
+>
+
+            <div class="project-content">
+
+                <h2>Fylo Data Storage Component</h2>
+
+                <a href="./fylo-data-storage-component/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Grid Landing Page</h2>
+
+                <a href="./grid-landing-page/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Huddle Landing Page With Single Introductory Section</h2>
+
+                <a href="./huddle-landing-page-with-single-introductory-section/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./interactive-rating-component/preview.jpg"
+    alt="Interactive Rating Component"
+>
+
+            <div class="project-content">
+
+                <h2>Interactive Rating Component</h2>
+
+                <a href="./interactive-rating-component/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./intro-component-with-signup-form/preview.jpg"
+    alt="Intro Component With Signup Form"
+>
+
+            <div class="project-content">
+
+                <h2>Intro Component With Signup Form</h2>
+
+                <a href="./intro-component-with-signup-form/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./newsletter-sign-up-with-success-message/preview.jpg"
+    alt="Newsletter Sign Up With Success Message"
+>
+
+            <div class="project-content">
+
+                <h2>Newsletter Sign Up With Success Message</h2>
+
+                <a href="./newsletter-sign-up-with-success-message/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Nft Preview Card Component</h2>
+
+                <a href="./nft-preview-card-component/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Order Summary Component</h2>
+
+                <a href="./order-summary-component/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./ping-coming-soon-page/preview.jpg"
+    alt="Ping Coming Soon Page"
+>
+
+            <div class="project-content">
+
+                <h2>Ping Coming Soon Page</h2>
+
+                <a href="./ping-coming-soon-page/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Product Preview Card Component</h2>
+
+                <a href="./product-preview-card-component/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Profile Card Component</h2>
+
+                <a href="./profile-card-component/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Qr Code</h2>
+
+                <a href="./qr-code/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Recipe Page</h2>
+
+                <a href="./recipe-page/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Results Summary Component</h2>
+
+                <a href="./results-summary-component/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./single-price-grid-component/preview.jpg"
+    alt="Single Price Grid Component"
+>
+
+            <div class="project-content">
+
+                <h2>Single Price Grid Component</h2>
+
+                <a href="./single-price-grid-component/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Social Link Profile</h2>
+
+                <a href="./social-link-profile/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Social Proof Section</h2>
+
+                <a href="./social-proof-section/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Stats Preview Card Component</h2>
+
+                <a href="./stats-preview-card-component/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <div class="project-preview no-preview">
+    <span>Aucun aperÃ§u</span>
+</div>
+
+            <div class="project-content">
+
+                <h2>Testimonials Grid Section</h2>
+
+                <a href="./testimonials-grid-section/">
+                    Voir le projet
+                </a>
+
+            </div>
+
+        </article>
+
+        <article class="project">
+
+            <img
+    class="project-preview"
+    src="./weather-app/preview.jpg"
+    alt="Weather App"
+>
+
+            <div class="project-content">
+
                 <h2>Weather App</h2>
 
                 <a href="./weather-app/">
                     Voir le projet
                 </a>
+
             </div>
+
         </article>
 
-    </section>
 
-</main>
+        </section>
 
-<footer>
-    <p>© Coco56 - Frontend Mentor</p>
-</footer>
+    </main>
+
+    <footer>
+
+        <p>
+            Â© Coco56 - Frontend Mentor
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
