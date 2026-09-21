@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Frontend Mentor | Hotel booking confirmation page</title>
+</head>
+
+<body>
+
+  <!-- ========================================
+       SIDEBAR
+  ======================================== -->
+
+  <aside class="volet-gauche">
+
+    <!-- Checkbox : contrôle le menu sans JS -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+    <header>
+
+      <!-- LOGO + BOUTONS MENU -->
+      <div class="logo">
+
+        <img
+          src="./assets/images/logo.svg"
+          alt="logo Maison Soleil"
+        >
+
+        <label
+          for="menu-toggle"
+          class="menu-button menu-open"
+          aria-label="Open menu"
+        >
+          <img
+            src="./assets/images/icon-menu.svg"
+            alt=""
+          >
+        </label>
+
+        <label
+          for="menu-toggle"
+          class="menu-button menu-close"
+          aria-label="Close menu"
+        >
+          <img
+            src="./assets/images/icon-close.svg"
+            alt=""
+          >
+        </label>
+
+      </div>
+
+
+      <!-- NAVIGATION -->
+      <nav class="navigation">
+
+        <a href="#">
+          <img
+            src="./assets/images/icon-bed.svg"
+            alt=""
+          >
+          <span>Your stay</span>
+          <span class="notification">1</span>
+        </a>
+
+        <a href="#">
+          <img
+            src="./assets/images/icon-house.svg"
+            alt=""
+          >
+          <span>The house</span>
+        </a>
+
+        <a href="#">
+          <img
+            src="./assets/images/icon-pin.svg"
+            alt=""
+          >
+          <span>Around town</span>
+        </a>
+
+        <a href="#">
+          <img
+            src="./assets/images/icon-breakfast-outline.svg"
+            alt=""
+          >
+          <span>Breakfast</span>
+        </a>
+
+        <a href="#">
+          <img
+            src="./assets/images/icon-mail.svg"
+            alt=""
+          >
+          <span>Messages</span>
+        </a>
+
+      </nav>
+
+    </header>
+
+
+    <!-- METEO + INFORMATIONS -->
+    <div class="sidebar-bottom">
+
+      <div class="meteo">
+
+        <img
+          src="./assets/images/icon-weather.svg"
+          alt=""
+        >
+
+        <span>Today in Cassis</span>
+        <span>27°</span>
+        <span>Sunny · light breeze</span>
+
+      </div>
+
+
+      <div class="infolegal">
+
+        <span>Est. 1987</span>
+
+        <span>
+          Maison Soleil · 12 Rue des Oliviers · Cassis
+        </span>
+
+        <span>
+          © 2026 Maison Soleil
+        </span>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- ========================================
+       MAIN
+  ======================================== -->
+
+  <main>
+
+    <!-- MAIN HEADER -->
+    <header>
+
+      <div>
+
+        <span>Booking · Confirmed</span>
+
+        <h1>
+          Bienvenue,
+          <span class="header-name">Lucia.</span>
+        </h1>
+
+      </div>
+
+
+      <div class="buttonheader">
+
+        <button>
+          Print receipt
+        </button>
+
+        <button>
+          Add to calendar
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- ========================================
+         CARDS
+    ======================================== -->
+
+    <section class="cards">
+
+      <!-- SUN -->
+      <div class="sun-card">
+        <img
+          src="./assets/images/illustration-sun.svg"
+          alt=""
+        >
+      </div>
+
+
+      <!-- RECEIPT CARD -->
+      <article class="leftcard">
+
+        <header>
+
+          <div>
+
+            <span>Receipt</span>
+
+            <h2>Your stay</h2>
+
+          </div>
+
+
+          <div class="numerofacture">
+
+            <span>№ MS-2026</span>
+            <span>0421-AH</span>
+
+          </div>
+
+        </header>
+
+
+        <!-- CHECK IN / CHECK OUT -->
+        <div class="checking">
+
+          <div>
+
+            <span>Check in</span>
+
+            <h3>25 Apr</h3>
+
+            <span>
+              Saturday · 15:00
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <span>Check out</span>
+
+            <h3>29 Apr</h3>
+
+            <span>
+              Wednesday · 11:00
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- RECEIPT LINES -->
+        <div class="recapfact">
+
+          <div class="recapfact-ligne">
+
+            <span>
+              Room · La Garrigue x 4 nights
+            </span>
+
+            <span>
+              € 620.00
+            </span>
+
+          </div>
+
+
+          <div class="recapfact-ligne">
+
+            <span>
+              Breakfast x 2 guests
+            </span>
+
+            <span>
+              € 96.00
+            </span>
+
+          </div>
+
+
+          <div class="recapfact-ligne tax">
+
+            <span>
+              Tourist tax
+            </span>
+
+            <span>
+              € 14.40
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- TOTAL -->
+        <div class="totalfact">
+
+          <div class="totalfact-price">
+
+            <span>
+              Total paid
+            </span>
+
+            <span>
+              € 730.40
+            </span>
+
+          </div>
+
+
+          <div class="totalfact-codebarre">
+
+            <span>
+              Paid · Wise · GBP
+            </span>
+
+            <img
+              src="./assets/images/icon-barcode.svg"
+              alt=""
+            >
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- WELCOME CARD -->
+      <article class="rightcard">
+
+        <header>
+
+          <span>
+            Welcome card
+          </span>
+
+          <img
+            src="./assets/images/icon-sun.svg"
+            alt=""
+          >
+
+        </header>
+
+
+        <div class="rightcard-content">
+
+          <span>
+            A note from your host,
+          </span>
+
+          <h2>
+            Margaux.
+          </h2>
+
+          <p>
+            We're so glad you're coming.
+            The shutters will be open,
+            the lemonade cold, and the cat -
+            Poivre - pretending not to notice you.
+          </p>
+
+        </div>
+
+
+        <div class="rightcard-footer">
+
+          <span>
+            Room
+          </span>
+
+          <span>
+            La Garrigue
+          </span>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- HOVER TEXT -->
+    <div class="hovertofan">
+
+      <img
+        src="./assets/images/icon-sparkle.svg"
+        alt=""
+      >
+
+      <span>
+        Hover to fan
+      </span>
+
+      <img
+        src="./assets/images/icon-sparkle.svg"
+        alt=""
+      >
+
+    </div>
+
+
+    <!-- ========================================
+         RESERVATION DETAILS
+    ======================================== -->
+
+    <section class="detailsresa">
+
+
+      <!-- ARRIVAL -->
+      <article class="arrival cardresa">
+
+        <header>
+
+          <div>
+
+            <img
+              src="./assets/images/icon-key.svg"
+              alt=""
+            >
+
+            <span>
+              Arrival
+            </span>
+
+          </div>
+
+          <span class="card-number">
+            01
+          </span>
+
+        </header>
+
+
+        <h3>
+          Check-in from 15:00
+        </h3>
+
+        <span class="soustitre">
+          Sat, 25 April
+        </span>
+
+        <p>
+          Ring the brass bell by the blue door.
+          If we're at the market, the key is in
+          the terracotta pot by the olive tree.
+        </p>
+
+      </article>
+
+
+      <!-- WIFI -->
+      <article class="wifi cardresa">
+
+        <header>
+
+          <div>
+
+            <img
+              src="./assets/images/icon-wifi.svg"
+              alt=""
+            >
+
+            <span>
+              Wifi
+            </span>
+
+          </div>
+
+          <span class="card-number">
+            02
+          </span>
+
+        </header>
+
+
+        <div>
+
+          <h3>
+            Le Soleil · Guest
+          </h3>
+
+          <span class="soustitre">
+            Password below
+          </span>
+
+        </div>
+
+
+        <div>
+
+          <div class="network">
+
+            <h3>
+              Network
+            </h3>
+
+            <span>
+              Le Soleil · Guest
+            </span>
+
+          </div>
+
+
+          <div class="network">
+
+            <h3>
+              Password
+            </h3>
+
+            <div>
+
+              <span>
+                soleil-2026
+              </span>
+
+              <button>
+                Copy
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- BREAKFAST -->
+      <article class="breakfast cardresa">
+
+        <header>
+
+          <div>
+
+            <img
+              src="./assets/images/icon-breakfast.svg"
+              alt=""
+            >
+
+            <span>
+              Breakfast
+            </span>
+
+          </div>
+
+          <span class="card-number">
+            03
+          </span>
+
+        </header>
+
+
+        <h3>
+          Served 8 - 10:30
+        </h3>
+
+        <span class="soustitre">
+          On the terrace
+        </span>
+
+        <p>
+          Fresh figs, Marseille honey,
+          pain au levain, and espresso.
+          Gluten-free option? Leave a note
+          the night before.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <!-- ATTRIBUTION -->
+    <div class="attribution">
+
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">
+        Frontend Mentor
+      </a>.
+
+      Coded by
+      <a href="https://coco56-c.github.io/Frontend-Mentor/">
+        Crocq Corentin
+      </a>.
+
+    </div>
+
+  </main>
+
+</body>
+</html>

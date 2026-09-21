@@ -1,0 +1,1693 @@
+/********************************************
+* FONTS
+********************************************/
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/dm-sans/DMSans-VariableFont_opsz,wght.ttf")
+       format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("./assets/fonts/dm-mono/DMMono-Regular.ttf")
+       format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("./assets/fonts/dm-mono/DMMono-Medium.ttf")
+       format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf")
+       format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf")
+       format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/********************************************
+* ROOT
+********************************************/
+
+:root {
+  --Neutral-900: hsl(33, 15%, 15%);
+  --Neutral-800: hsl(33, 22%, 20%);
+  --Neutral-700: hsl(32, 20%, 29%);
+  --Neutral-600: hsl(33, 17%, 41%);
+  --Neutral-400: hsl(36, 22%, 86%);
+  --Neutral-200: hsl(30, 24%, 93%);
+  --Neutral-100: hsl(35, 60%, 96%);
+  --Neutral-50: hsl(40, 60%, 98%);
+  --Neutral-0: hsl(0, 0%, 100%);
+
+  --Sun-500: hsl(42, 83%, 58%);
+  --Sun-300: hsl(44, 84%, 75%);
+  --Sun-200: hsl(45, 100%, 74%);
+  --Sun-50: hsl(41, 100%, 93%);
+
+  --Terracotta-700: hsl(15, 69%, 37%);
+  --Terracotta-600: hsl(15, 74%, 41%);
+  --Terracotta-500: hsl(18, 62%, 47%);
+  --Terracotta-400: hsl(22, 72%, 56%);
+
+  --Blue-500: hsl(230, 49%, 56%);
+  --Rose-500: hsl(340, 48%, 52%);
+
+  --font-body: "DM Sans", sans-serif;
+  --font-display: "Fraunces", serif;
+  --font-mono: "DM Mono", monospace;
+}
+
+
+/********************************************
+* RESET
+********************************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--Neutral-100);
+  color: var(--Neutral-900);
+  font-family: var(--font-body);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+
+/********************************************
+* DESKTOP LAYOUT
+********************************************/
+
+body {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+}
+
+main {
+  min-width: 0;
+  min-height: 100vh;
+  padding: 2rem 3rem;
+}
+
+
+/********************************************
+* SIDEBAR DESKTOP
+********************************************/
+
+.volet-gauche {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-height: 100vh;
+
+  padding: 1rem;
+
+  border-right: 1px solid var(--Neutral-400);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: var(--Neutral-100);
+
+  z-index: 2000;
+}
+
+.volet-gauche > header {
+  width: 100%;
+}
+
+.logo {
+  width: 100%;
+  padding-bottom: 0.75rem;
+
+  border-bottom: 1px solid var(--Neutral-400);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo > img {
+  width: 100px;
+  display: block;
+}
+
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-button {
+  display: none;
+}
+
+
+/********************************************
+* NAVIGATION DESKTOP
+********************************************/
+
+.navigation {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  margin-top: 1.25rem;
+}
+
+.navigation a {
+  width: 100%;
+
+  padding: 0.7rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  color: var(--Neutral-700);
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.navigation a:hover {
+  background: var(--Neutral-0);
+  color: var(--Neutral-900);
+}
+
+.navigation a:first-child {
+  background: var(--Neutral-0);
+  color: var(--Neutral-900);
+}
+
+.navigation a img {
+  width: 20px;
+  height: 20px;
+}
+
+.notification {
+  margin-left: auto;
+
+  width: 22px;
+  height: 22px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--Terracotta-600);
+  color: white;
+
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+}
+
+
+/********************************************
+* SIDEBAR BOTTOM
+********************************************/
+
+.sidebar-bottom {
+  width: 100%;
+}
+
+.meteo {
+  position: relative;
+  overflow: hidden;
+
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  background: var(--Sun-300);
+
+  border-radius: 18px;
+}
+
+.meteo img {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+
+  width: 70px;
+}
+
+.meteo span:first-of-type {
+  color: var(--Neutral-600);
+
+  text-transform: uppercase;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+.meteo span:nth-of-type(2) {
+  font-family: var(--font-display);
+
+  font-size: 1.75rem;
+
+  color: var(--Neutral-900);
+}
+
+.meteo span:last-of-type {
+  color: var(--Neutral-600);
+}
+
+.infolegal {
+  width: 70%;
+
+  padding-top: 1rem;
+
+  border-top: 1px dashed var(--Neutral-400);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  color: var(--Neutral-600);
+
+  font-size: 0.7rem;
+}
+
+
+/********************************************
+* MAIN HEADER
+********************************************/
+
+main > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+main > header > div:first-child > span {
+  color: var(--Neutral-600);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.75rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+h1 {
+  margin-top: 0.4rem;
+
+  font-size: 45px;
+  line-height: 1;
+}
+
+.header-name {
+  color: var(--Terracotta-600);
+
+  font-family: var(--font-display);
+
+  font-style: italic;
+}
+
+
+/********************************************
+* HEADER BUTTONS
+********************************************/
+
+.buttonheader {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.buttonheader button {
+  min-width: max-content;
+
+  padding: 0.65rem 1rem;
+
+  border: 1px solid var(--Neutral-400);
+  border-radius: 999px;
+
+  background: var(--Neutral-100);
+  color: var(--Neutral-900);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.buttonheader button:last-child {
+  background: var(--Neutral-900);
+  color: white;
+}
+
+
+/********************************************
+* RECEIPT CARDS
+********************************************/
+
+.cards {
+  position: relative;
+
+  margin-top: 3rem;
+
+  padding: 30px 60px 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  isolation: isolate;
+}
+
+.leftcard,
+.rightcard {
+  width: 390px;
+  height: 440px;
+
+  flex: 0 0 390px;
+
+  position: relative;
+
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    margin 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/********************************************
+* SUN
+********************************************/
+
+.sun-card {
+  position: absolute;
+
+  z-index: -1;
+
+  width: 300px;
+  height: 300px;
+
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-50%, -50%);
+
+  background: transparent;
+
+  opacity: 0.65;
+
+  pointer-events: none;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.5s ease,
+    filter 0.5s ease;
+}
+
+.sun-card img {
+  width: 150px;
+
+  opacity: 0.75;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.5s ease;
+}
+
+.cards:hover .sun-card {
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1.12);
+
+  filter:
+    drop-shadow(
+      0 0 35px rgba(255, 210, 100, 0.35)
+    );
+}
+
+.cards:hover .sun-card img {
+  opacity: 0.9;
+
+  transform:
+    scale(1.1)
+    rotate(5deg);
+}
+
+
+/********************************************
+* LEFT CARD
+********************************************/
+
+.leftcard {
+  z-index: 2;
+
+  padding: 1rem;
+
+  background-color: var(--Neutral-50);
+
+  border: 1px solid var(--Neutral-400);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 35px rgba(55, 40, 25, 0.08);
+
+  transform: rotate(-4deg);
+
+  transform-origin: bottom right;
+
+  margin-top: -70px;
+  margin-right: -10px;
+}
+
+
+/********************************************
+* RIGHT CARD
+********************************************/
+
+.rightcard {
+  z-index: 3;
+
+  padding: 1.75rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: var(--Neutral-50);
+
+  background: linear-gradient(
+    135deg,
+    var(--Terracotta-700),
+    var(--Terracotta-400)
+  );
+
+  border-radius: 18px;
+
+  transform: rotate(4deg);
+
+  transform-origin: bottom left;
+
+  margin-top: -70px;
+  margin-left: -20px;
+
+  box-shadow:
+    0 15px 35px rgba(55, 40, 25, 0.12);
+}
+
+
+/********************************************
+* HOVER CARDS
+********************************************/
+
+.cards:hover .leftcard {
+  transform:
+    translateX(-75px)
+    rotate(-9deg);
+}
+
+.cards:hover .rightcard {
+  transform:
+    translateX(75px)
+    rotate(9deg);
+}
+
+.cards:has(.leftcard:hover) .leftcard {
+  transform:
+    translateX(-90px)
+    rotate(-11deg);
+}
+
+.cards:has(.rightcard:hover) .rightcard {
+  transform:
+    translateX(90px)
+    rotate(11deg);
+}
+
+
+/********************************************
+* LEFT CARD CONTENT
+********************************************/
+
+.leftcard > header {
+  padding-bottom: 1.25rem;
+
+  border-bottom: 1px solid var(--Neutral-400);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftcard > header > div:first-child span {
+  font-family: var(--font-mono);
+
+  font-size: 0.7rem;
+
+  text-transform: uppercase;
+
+  color: var(--Neutral-600);
+}
+
+.leftcard h2 {
+  margin-top: 0.3rem;
+
+  font-size: 1.8rem;
+}
+
+.numerofacture {
+  color: var(--Neutral-600);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.65rem;
+
+  line-height: 1.5;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: end;
+}
+
+
+/********************************************
+* CHECKING
+********************************************/
+
+.checking {
+  display: flex;
+  justify-content: center;
+
+  gap: 4rem;
+
+  padding: 1.25rem 0;
+
+  border-bottom: 1px solid var(--Neutral-400);
+
+  text-align: center;
+}
+
+.checking > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.checking span {
+  color: var(--Neutral-600);
+
+  font-size: 0.7rem;
+}
+
+.checking h3 {
+  font-size: 1.75rem;
+}
+
+
+/********************************************
+* RECEIPT
+********************************************/
+
+.recapfact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  padding: 1.25rem 0;
+}
+
+.recapfact-ligne {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  font-size: 0.75rem;
+}
+
+.tax {
+  color: var(--Neutral-600);
+}
+
+.recapfact-ligne span:last-child {
+  font-family: var(--font-mono);
+}
+
+
+/********************************************
+* TOTAL
+********************************************/
+
+.totalfact {
+  padding-top: 1.25rem;
+
+  border-top: 1px solid var(--Neutral-600);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.totalfact-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalfact-price span:first-child {
+  font-family: var(--font-mono);
+
+  font-size: 0.7rem;
+
+  text-transform: uppercase;
+
+  color: var(--Neutral-600);
+
+  letter-spacing: 1px;
+}
+
+.totalfact-price span:last-child {
+  font-family: var(--font-display);
+
+  font-size: 1.8rem;
+}
+
+.totalfact-codebarre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--Neutral-600);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.65rem;
+}
+
+.totalfact-codebarre img {
+  width: 80px;
+}
+
+
+/********************************************
+* WELCOME CARD
+********************************************/
+
+.rightcard header {
+  padding-top: 0.75rem;
+
+  border-top: 1px dashed rgba(255, 255, 255, 0.5);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rightcard header span {
+  color: var(--Neutral-50);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.7rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.rightcard header img {
+  width: 40px;
+}
+
+.rightcard-content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.75rem;
+}
+
+.rightcard-content > span {
+  font-size: 1rem;
+
+  color: var(--Sun-300);
+
+  font-style: italic;
+}
+
+.rightcard-content h2 {
+  font-size: 2.5rem;
+
+  font-style: italic;
+}
+
+.rightcard-content p {
+  font-size: 0.8rem;
+
+  line-height: 1.7;
+}
+
+.rightcard-footer {
+  padding-top: 1rem;
+
+  border-top: 1px dashed rgba(255, 255, 255, 0.5);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.25rem;
+}
+
+.rightcard-footer span:first-child {
+  font-family: var(--font-mono);
+
+  font-size: 0.65rem;
+
+  text-transform: uppercase;
+}
+
+.rightcard-footer span:last-child {
+  font-family: var(--font-display);
+
+  font-size: 1.3rem;
+}
+
+
+/********************************************
+* HOVER TO FAN
+********************************************/
+
+.hovertofan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  margin: -1rem 0 1rem;
+
+  color: var(--Neutral-600);
+
+  font-family: var(--font-mono);
+
+  font-size: 0.5rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.hovertofan img {
+  width: 8px;
+}
+
+
+/********************************************
+* RESERVATION DETAILS
+********************************************/
+
+.icon {
+  width: 20px;
+}
+
+.detailsresa {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1rem;
+
+  width: 100%;
+}
+
+.cardresa {
+  min-width: 0;
+
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  background: var(--Neutral-50);
+
+  border: 1px solid var(--Neutral-400);
+
+  border-radius: 18px;
+}
+
+.cardresa header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardresa header > div {
+  display: flex;
+  align-items: center;
+
+  gap: 0.6rem;
+}
+
+.cardresa header img {
+  width: 25px;
+  height: 25px;
+
+  padding: 5px;
+
+  box-sizing: content-box;
+
+  border-radius: 8px;
+}
+
+.cardresa header > span.card-number {
+  font-family: var(--font-display);
+
+  font-size: 1.25rem;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+.cardresa header > div > span {
+  font-family: var(--font-mono);
+
+  text-transform: uppercase;
+
+  line-height: 1;
+
+  letter-spacing: 1px;
+}
+
+.cardresa h3 {
+  font-size: 1.2rem;
+}
+
+.cardresa > span {
+  color: var(--Neutral-600);
+
+  font-size: 0.75rem;
+}
+
+.cardresa p {
+  color: var(--Neutral-600);
+}
+
+.soustitre {
+  color: var(--Neutral-600);
+}
+
+
+/********************************************
+* ARRIVAL
+********************************************/
+
+.arrival header {
+  color: var(--Terracotta-700);
+}
+
+.arrival header img {
+  background: var(--Terracotta-700);
+}
+
+
+/********************************************
+* WIFI
+********************************************/
+
+.wifi header {
+  color: var(--Blue-500);
+}
+
+.wifi header img {
+  background: var(--Blue-500);
+}
+
+.wifi > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.network {
+  padding: 0.75rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+
+  background: var(--Neutral-200);
+
+  border-radius: 10px;
+
+  margin: 10px 10px 0 0;
+}
+
+.network h3 {
+  font-family: var(--font-body);
+
+  font-size: 0.65rem;
+
+  text-transform: uppercase;
+
+  color: var(--Neutral-600);
+
+  letter-spacing: 1px;
+}
+
+.network > span,
+.network > div > span {
+  font-family: var(--font-mono);
+
+  font-size: 0.7rem;
+}
+
+.network button {
+  border: 0;
+
+  padding: 0.3rem 0.6rem;
+
+  border-radius: 999px;
+
+  background: var(--Neutral-200);
+
+  color: var(--Neutral-600);
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  font-size: 0.65rem;
+
+  border: 2px solid var(--Neutral-400);
+}
+
+.network button:hover {
+  background-color: var(--Neutral-400);
+}
+
+
+/********************************************
+* BREAKFAST
+********************************************/
+
+.breakfast header {
+  color: var(--Rose-500);
+}
+
+.breakfast header img {
+  background: var(--Rose-500);
+}
+
+
+/********************************************
+* ATTRIBUTION
+********************************************/
+
+.attribution {
+  color: var(--Neutral-600);
+
+  font-size: 0.6875rem;
+
+  text-align: center;
+
+  font-family: var(--font-mono);
+}
+
+.attribution a {
+  color: var(--Terracotta-600);
+}
+
+
+/********************************************
+* TABLET
+********************************************/
+
+@media (max-width: 1100px) {
+
+  body {
+    grid-template-columns: 210px 1fr;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .cards {
+    min-height: 400px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .leftcard,
+  .rightcard {
+    width: 360px;
+    height: 400px;
+
+    flex-basis: 360px;
+  }
+
+  .leftcard {
+    margin-right: -40px;
+  }
+
+  .rightcard {
+    margin-left: -40px;
+  }
+
+  .cards:hover .leftcard {
+    transform:
+      translateX(-60px)
+      rotate(-9deg);
+  }
+
+  .cards:hover .rightcard {
+    transform:
+      translateX(60px)
+      rotate(9deg);
+  }
+
+  .cards:has(.leftcard:hover) .leftcard {
+    transform:
+      translateX(-70px)
+      rotate(-11deg);
+  }
+
+  .cards:has(.rightcard:hover) .rightcard {
+    transform:
+      translateX(70px)
+      rotate(11deg);
+  }
+
+  .detailsresa {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/********************************************
+* MOBILE
+********************************************/
+
+@media (max-width: 768px) {
+
+  /***************************************
+  * BODY
+  ***************************************/
+
+  body {
+    display: block;
+    min-height: 100vh;
+  }
+
+
+  /***************************************
+  * SIDEBAR
+  ***************************************/
+
+  .volet-gauche {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+    min-height: 0;
+
+    padding: 1rem 1.25rem;
+
+    border-right: 0;
+    border-bottom: 1px solid var(--Neutral-400);
+
+    display: block;
+
+    background: var(--Neutral-100);
+
+    z-index: 2000;
+  }
+
+  .volet-gauche > header {
+    width: 100%;
+    height: auto;
+
+    position: relative;
+
+    z-index: 3000;
+  }
+
+
+  /***************************************
+  * LOGO
+  ***************************************/
+
+  .logo {
+    width: 100%;
+    height: 40px;
+
+    padding: 0;
+
+    border: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+
+    z-index: 2002;
+  }
+
+  .logo > img {
+    width: 130px;
+    height: auto;
+
+    display: block;
+
+    position: relative;
+
+    z-index: 2003;
+  }
+
+
+  /***************************************
+  * CHECKBOX
+  ***************************************/
+
+  .menu-toggle {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+  }
+
+
+  /***************************************
+  * MENU BUTTON
+  ***************************************/
+
+  .menu-button {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--Neutral-400);
+
+    border-radius: 50%;
+
+    background: var(--Neutral-50);
+
+    cursor: pointer;
+
+    position: relative;
+
+    z-index: 3000;
+  }
+
+  .menu-button img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .menu-close {
+    display: none;
+
+    position: fixed;
+
+    top: 1rem;
+    right: 1.25rem;
+
+    z-index: 3001;
+  }
+
+
+  /***************************************
+  * NAVIGATION MOBILE
+  ***************************************/
+
+  .navigation {
+    position: fixed;
+
+    top: 72px;
+    right: 0;
+    bottom: 190px;
+    left: 0;
+
+    width: 100vw;
+    height: auto;
+
+    margin: 0;
+
+    padding: 2rem 1.25rem 1rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.75rem;
+
+    background: var(--Neutral-100);
+
+    overflow-y: auto;
+
+    transform: translateX(100%);
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+      transform 0.4s ease,
+      visibility 0s linear 0.4s;
+
+    z-index: 2500;
+  }
+
+
+  /***************************************
+  * MENU OUVERT
+  ***************************************/
+
+  .menu-toggle:checked ~ header .menu-open {
+    display: none;
+  }
+
+  .menu-toggle:checked ~ header .menu-close {
+    display: grid;
+  }
+
+  .menu-toggle:checked ~ header .navigation {
+    transform: translateX(0);
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transition:
+      transform 0.4s ease,
+      visibility 0s linear 0s;
+  }
+
+
+  /***************************************
+  * LIENS NAV
+  ***************************************/
+
+  .navigation a {
+    width: 100%;
+
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    font-size: 1.1rem;
+
+    border-radius: 12px;
+
+    flex-shrink: 0;
+  }
+
+  .navigation a img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .notification {
+    margin-left: auto;
+  }
+
+
+  /***************************************
+  * SIDEBAR BOTTOM
+  *
+  * On le cache derrière le menu fermé,
+  * mais il reste présent dans le DOM.
+  ***************************************/
+
+  .sidebar-bottom {
+    display: none;
+  }
+
+  .menu-toggle:checked ~ .sidebar-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding: 0 1.25rem 1.5rem;
+
+    display: block;
+
+    background: var(--Neutral-100);
+
+    z-index: 3000;
+  }
+
+  .menu-toggle:checked ~ .sidebar-bottom .meteo {
+    width: min(100%, 280px);
+
+    margin: 0 0 1rem;
+    padding: 0.9rem 1rem;
+
+    gap: 0.15rem;
+  }
+
+  .menu-toggle:checked ~ .sidebar-bottom .meteo img {
+    top: -10px;
+    right: -6px;
+
+    width: 52px;
+  }
+
+  .menu-toggle:checked ~ .sidebar-bottom .meteo span:first-of-type {
+    font-size: 9px;
+  }
+
+  .menu-toggle:checked ~ .sidebar-bottom .meteo span:nth-of-type(2) {
+    font-size: 1.4rem;
+  }
+
+  .menu-toggle:checked ~ .sidebar-bottom .meteo span:last-of-type {
+    font-size: 0.75rem;
+  }
+
+  .menu-toggle:checked ~ .sidebar-bottom .infolegal {
+    width: 280px;
+    max-width: 100%;
+
+    margin: 0;
+  }
+
+  /***************************************
+  * MAIN
+  ***************************************/
+
+  main {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 1.5rem 1rem;
+  }
+
+  main > header {
+    flex-direction: column;
+
+    gap: 1.25rem;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+
+  /***************************************
+  * HEADER BUTTONS
+  ***************************************/
+
+  .buttonheader {
+    width: 100%;
+  }
+
+  .buttonheader button {
+    flex: 1;
+  }
+
+
+  /***************************************
+  * CARDS
+  ***************************************/
+
+  .cards {
+    width: 100%;
+
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 1rem;
+  }
+
+
+  /***************************************
+  * SUN
+  ***************************************/
+
+  .sun-card {
+    display: none;
+  }
+
+
+  /***************************************
+  * BASE CARDS
+  ***************************************/
+
+  .leftcard,
+  .rightcard {
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
+    flex: none;
+
+    margin: 0;
+
+    transform: none;
+  }
+
+
+  /***************************************
+  * LEFT CARD
+  ***************************************/
+
+  .leftcard {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 400px;
+
+    flex: none;
+
+    position: relative;
+
+    z-index: 1;
+
+    margin: 0;
+
+    padding: 1rem;
+
+    transform: none;
+
+    transform-origin: center;
+
+    box-shadow:
+      0 10px 25px rgba(55, 40, 25, 0.08);
+  }
+
+
+  /***************************************
+  * RIGHT CARD
+  ***************************************/
+
+  .rightcard {
+    width: 100%;
+
+    height: 400px;
+
+    min-height: 400px;
+
+    flex: none;
+
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    padding: 1.5rem;
+
+    transform: none;
+
+    transform-origin: center;
+
+    box-shadow:
+      0 10px 25px rgba(55, 40, 25, 0.10);
+  }
+
+
+  /***************************************
+  * ORDER
+  ***************************************/
+
+  .rightcard {
+    order: 1;
+  }
+
+  .leftcard {
+    order: 2;
+  }
+
+
+  /***************************************
+  * HOVER TO FAN
+  ***************************************/
+
+  .hovertofan {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+
+  /***************************************
+  * DETAILS
+  ***************************************/
+
+  .detailsresa {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+  }
+
+  .cardresa {
+    width: 100%;
+  }
+
+
+  /***************************************
+  * DESACTIVER HOVER DES CARTES
+  ***************************************/
+
+  .cards:hover .leftcard,
+  .cards:hover .rightcard,
+  .cards:has(.leftcard:hover) .leftcard,
+  .cards:has(.rightcard:hover) .rightcard {
+    transform: none;
+  }
+}
+
+
+/********************************************
+* VERY SMALL MOBILE
+********************************************/
+
+@media (max-width: 480px) {
+
+  main {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .volet-gauche {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navigation {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .checking {
+    gap: 1.5rem;
+  }
+
+  .recapfact-ligne {
+    font-size: 0.7rem;
+  }
+}
