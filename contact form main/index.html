@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">  
+  <title>Frontend Mentor | Contact form</title>
+
+</head>
+<body>
+
+  <section class="messagesent">
+    <h4> <img src="./assets/images/icon-success-check.svg" alt="icon success check"> Message Sent!</h4>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </section>
+
+  <form class="formcontact" id="form" novalidate>
+    <h1>Contact Us</h1>
+
+    <div class="firstlast">
+      <div class="first">
+        <label for="first-name">First Name <span class="etoile">*</span></label>
+        <input type="text" id="first-name" name="first-name" autocomplete="given-name" required>
+        <span class="erreur" id="first-name-error">This field is required</span>
+      </div>
+      <div class="last">
+        <label for="last-name">Last Name <span class="etoile">*</span></label>
+      <input type="text" id="last-name" name="last-name" autocomplete="family-name" required>
+      <span class="erreur" id="last-name-error">This field is required</span>
+      </div>
+    </div>
+
+    <div class="email">
+      <label for="email">Email <span class="etoile">*</span></label>
+      <input type="email" id="email" name="email" autocomplete="email" required>
+      <span class="erreur" id="email-error">Please enter a valid email address</span>
+    </div>
+
+    <fieldset class="query">
+
+        <legend>
+            Query Type <span class="etoile">*</span>
+        </legend>
+
+        <div class="querycontent">
+
+            <label for="generalenquiry" class="queryradio">
+                <input type="radio" name="choix" id="generalenquiry">
+                General Enquiry
+            </label>
+
+            <label for="supportrequest" class="queryradio">
+                <input type="radio" name="choix" id="supportrequest">
+                Support Request
+            </label>
+
+        </div>
+
+        <span class="erreur" id="query-error">
+            Please select a query type
+        </span>
+
+    </fieldset>
+
+
+
+    <div class="message">
+      <label for="message">Message <span class="etoile">*</span></label>
+      <textarea id="message" name="message" required></textarea>
+      <span class="erreur" id="message-error">This field is required</span>
+    </div>
+
+    <div class="consent">
+      <div class="consentinput">
+        <input type="checkbox" id="consent-contacted" name="consent-contacted" required>
+        <label for="consent-contacted">
+            I consent to being contacted by the team
+            <span class="etoile">*</span>
+        </label>
+      </div>
+      <div>
+        <span class="erreur" id="consent-error">To submit this form, please consent to being contacted</span>
+      </div>
+    </div>
+
+    <button id="submit" type="submit">Submit</button>
+
+  </form>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Coco56-c">Crocq Corentin</a>.
+  </footer>
+  <script src="./script.js"></script>
+
+</body>
+</html>
