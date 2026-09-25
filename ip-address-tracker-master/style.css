@@ -1,0 +1,285 @@
+/**********************************
+* ROOT
+**********************************/
+
+
+:root {
+  --Gray-950: hsl(0, 0%, 17%);
+  --Gray-400: hsl(0, 0%, 58%);
+}
+
+/**********************************
+* GENERAL
+**********************************/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input{
+    font-size: 18px;
+}
+
+
+/**********************************
+* BODY
+**********************************/
+body{
+    font-family: "Rubik", sans-serif;
+}
+
+
+/**********************************
+* IP TITRE
+**********************************/
+
+.title-ip-tracker {
+    height: 280px;
+    background-image: url("./images/pattern-bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-ip-tracker h1{
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+
+/**********************************
+* IP INPUT
+**********************************/
+
+.ip-input {
+  display: flex;
+  width: min(550px, 90%);
+  height: 55px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.ip-input input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-size: 18px;
+  cursor: text;
+}
+
+.ip-input input:focus {
+    cursor: text;
+}
+
+.ip-input input::placeholder {
+    color: var(--Gray-400);
+}
+
+.ip-input button {
+  width: 55px;
+  height: 100%;
+  border: none;
+  background: var(--Gray-950);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ip-input button:hover {
+  background: var(--Gray-400);
+}
+
+.ip-input button img {
+  width: 11px;
+  height: 11px;
+}
+
+
+
+/**********************************
+* INFORMATION LOCALISATION
+**********************************/
+
+.localisation {
+    position: absolute;
+    z-index: 1000;
+    top: 225px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 250px;
+    width: 80%;
+    max-width: 1100px;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.localisation > div {
+    flex: 1;
+    min-width: 0;
+    padding: 0 25px;
+}
+
+.localisation > div:not(:last-child) {
+    border-right: 1px solid #ddd;
+}
+
+.localisation p {
+    color: var(--Gray-400);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: block;
+    overflow-wrap: break-word;
+}
+
+.localisation span {
+    color: var(--Gray-950);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+/**********************************
+* MAP
+**********************************/
+
+.map-section {
+    width: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 600px;
+}
+
+
+
+
+
+/**********************************
+* ROOT
+**********************************/
+
+
+
+/**********************************
+* FOOTER
+**********************************/
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/**********************************
+* MEDIA
+**********************************/
+
+@media (max-width: 768px) {
+
+    .title-ip-tracker {
+        height: 300px;
+
+        background-image: url("./images/pattern-bg-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .title-ip-tracker h1 {
+        margin-top: 25px;
+        font-size: 24px;
+    }
+
+    .ip-input {
+        width: 90%;
+        height: 55px;
+        margin-top: 25px;
+    }
+
+    .ip-input input {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    .ip-input button {
+        width: 55px;
+    }
+
+
+    /* CARD */
+
+    .localisation {
+        top: 170px;
+
+        width: 85%;
+        max-width: none;
+
+        min-height: auto;
+
+        flex-direction: column;
+
+        padding: 25px 20px;
+
+        border-radius: 12px;
+    }
+
+    .localisation > div {
+        width: 100%;
+        flex: none;
+
+        padding: 10px 0;
+
+        text-align: center;
+    }
+
+    .localisation > div:not(:last-child) {
+        border-right: none;
+    }
+
+    .localisation p {
+        margin-bottom: 6px;
+        font-size: 10px;
+    }
+
+    .localisation span {
+        font-size: 18px;
+    }
+
+
+    /* MAP */
+
+    #map {
+        height: calc(100vh - 300px);
+        min-height: 600px;
+    }
+
+
+    .attribution {
+        display: none;
+    }
+}

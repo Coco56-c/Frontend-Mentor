@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+</head>
+<body>
+  <section class="title-ip-tracker">
+    <h1>IP Address Tracker</h1>
+    <form class="ip-input" id="ip-form">
+      <label for="search-ip"></label>
+      <input type="text" id="ip-adress" aria-label="Adresse IP" placeholder="Search for any IP address or domain" pattern="^(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})){3}$" required>
+      <button type="button" aria-label="Valider l'adresse IP"><img src="./images/icon-arrow.svg" alt="icon-arrow" /></button>
+    </form>
+  </section>
+
+  <section class="localisation">
+    <div>
+      <p>IP Address</p>
+      <span id="ip-result">-</span>
+    </div>
+    <div>
+      <p>Location</p>
+      <span id="location-result">-</span>
+    </div>
+    <div>
+      <p>Timezone</p>
+      <span id="timezone-result">-</span>
+    </div>
+    <div>
+      <p>ISP</p>
+      <span id="isp-result">-</span>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <div id="map">
+
+    </div>
+  </section>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Coco56-c/Frontend-Mentor">Crocq Corentin</a>.
+  </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
