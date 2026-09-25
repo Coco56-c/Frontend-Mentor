@@ -1,12 +1,11 @@
 const input = document.getElementById("ip-adress");
-const button = document.querySelector(".ip-input button");
 const form = document.getElementById("ip-form");
-
 
 const ipResult = document.getElementById("ip-result");
 const locationResult = document.getElementById("location-result");
 const timezoneResult = document.getElementById("timezone-result");
 const ispResult = document.getElementById("isp-result");
+const searchError = document.getElementById("search-error");
 
 // -------------------------
 // LEAFLET
@@ -31,19 +30,20 @@ let marker = L.marker([51.505, -0.09], {
 }).addTo(map);
 
 
-
 // -------------------------
 // API IPIFY
 // -------------------------
 
 async function searchIP(ip) {
 
+    // Efface le message d'erreur
+    searchError.textContent = "";
+
     try {
 
         const response = await fetch(
             `https://ip-tracker-api.cor-crocq.workers.dev/?ip=${encodeURIComponent(ip)}`
         );
-
 
         if (!response.ok) {
             throw new Error("Erreur lors de la récupération des données");
@@ -79,26 +79,18 @@ async function searchIP(ip) {
 
         console.error(error);
 
+        searchError.textContent =
+            "Nothing found for that IP address or domain.";
     }
 }
 
 
 // -------------------------
-// BOUTON DE RECHERCHE
+// RECHERCHE
 // -------------------------
 
-button.addEventListener("click", () => {
-
-    const ip = input.value.trim();
-
-    if (ip === "") {
-        return;
-    }
-
-    searchIP(ip);
-});
-
 form.addEventListener("submit", (event) => {
+
     event.preventDefault();
 
     const ip = input.value.trim();
@@ -109,3 +101,10 @@ form.addEventListener("submit", (event) => {
 
     searchIP(ip);
 });
+
+
+// -------------------------
+// PREMIÈRE RECHERCHE
+// -------------------------
+
+searchIP("");

@@ -17,11 +17,12 @@
   <section class="title-ip-tracker">
     <h1>IP Address Tracker</h1>
     <form class="ip-input" id="ip-form">
-      <label for="search-ip"></label>
-      <input type="text" id="ip-adress" aria-label="Adresse IP" placeholder="Search for any IP address or domain" pattern="^(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})){3}$" required>
-      <button type="button" aria-label="Valider l'adresse IP"><img src="./images/icon-arrow.svg" alt="icon-arrow" /></button>
+      <input type="text" id="ip-adress" aria-label="Adresse IP"  placeholder="Search for any IP address or domain" required>
+      <button type="submit" aria-label="Valider l'adresse IP"><img src="./images/icon-arrow.svg" alt="icon-arrow" /></button>
     </form>
   </section>
+
+  <p id="search-error" role="status"></p>
 
   <section class="localisation">
     <div>
